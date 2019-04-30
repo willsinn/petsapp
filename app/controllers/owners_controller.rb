@@ -4,6 +4,7 @@ class OwnersController < ApplicationController
   end
 
   def show
+    @owner = Owner.find(params[:id])
   end
 
   def new
@@ -11,8 +12,8 @@ class OwnersController < ApplicationController
   end
 
   def create
-    byebug
     @owner = Owner.create(owner_params)
+    redirect_to owner_path	
   end
 
   def edit
@@ -25,7 +26,7 @@ class OwnersController < ApplicationController
   end
 
   private
-  
+
     def owner_params
       params.require(:owner).permit(:first_name, :last_name, :age, :email)
     end

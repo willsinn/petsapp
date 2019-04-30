@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'owners', to: 'owners#index'
   get 'owners/new', to: 'owners#new'
   post 'owners', to: 'owners#create'
-  get 'owners/:id', to: 'owners#show'
+  resources :owners, only: [:index, :show]
+  # get 'owners/:id', to: 'owners#show'
   get 'owners/:id/edit', to: 'owners#edit'
   get 'owners/update'
   get 'owners/destroy'
