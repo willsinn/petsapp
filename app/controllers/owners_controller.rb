@@ -13,10 +13,11 @@ class OwnersController < ApplicationController
 
   def create
     @owner = Owner.create(owner_params)
-    redirect_to owner_path	
+    redirect_to owner_path
   end
 
   def edit
+
   end
 
   def update

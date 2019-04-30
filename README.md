@@ -14,8 +14,8 @@ Deliverables:
 
 MODELS:
 
-- Owner has a first name, last name, age, and email
-- Owner has many pets
+<!-- - Owner has a first name, last name, age, and email -->
+<!-- - Owner has many pets -->
 - Pet has a name and type (dog, cat, or bird)
 - Pet belongs to a User
 
