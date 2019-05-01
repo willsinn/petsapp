@@ -1,2 +1,15 @@
-<h1>Pets#new</h1>
-<p>Find me in app/views/pets/new.html.erb</p>
+<% if flash[:message] %>
+
+<h1><%=flash[:message]%></h1>
+
+<%end%>
+
+<h1>New Pet</h1>
+<%=form_for @pet do |f|%>
+  <%=f.label :name%>
+  <%=f.text_field :name%>
+  <%=f.label :species%>
+  <%=f.text_field :species%>
+  <%=f.collection_select(:owner_id, @owners, :id, :full_name)%>
+  <%=f.submit "Create"%>
+<%end%>
