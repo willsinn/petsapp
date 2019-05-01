@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :pets
+  get 'owners/ownerpets', to: 'owners#ownerpets'
   resources :owners
-
 #  post 'owners/:id/edit', to: ''
   # get 'owners/new', to: 'owners#new'
   # post 'owners', to: 'owners#create'

@@ -9,13 +9,10 @@ class PetsController < ApplicationController
 
   def new
     @pet = Pet.new
-    @owners = Owner.all
   end
 
   def create
     @pet = Pet.create(pet_params)
-    @owners = Owner.all
-
     if @pet.valid?
       flash[:message] = "Pet Created Successfully"
       redirect_to @pet

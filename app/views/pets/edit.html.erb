@@ -1,2 +1,11 @@
 <h1>Pets#edit</h1>
-<p>Find me in app/views/pets/edit.html.erb</p>
+
+
+<%=form_for @pet do |f|%>
+  <%=f.label :name%>
+  <%=f.text_field :name%>
+  <%=f.label :species%>
+  <%=f.text_field :species%>
+  <%=f.collection_select(:owner_id, Owner.all, :id, :full_name)%>
+  <%=f.submit "Submit Edit"%>
+<%end%>

@@ -1,2 +1,3 @@
 <h1>This is a <%=@pet.species%>, named <%=@pet.name%>!</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<%= link_to "Edit", edit_pet_path, method: :get %>
+<%= link_to "Delete", @pet, method: :delete %>

@@ -5,6 +5,7 @@ class OwnersController < ApplicationController
 
   def show
     @owner = Owner.find(params[:id])
+
   end
 
   def new
@@ -30,6 +31,10 @@ class OwnersController < ApplicationController
     @owner = Owner.find(params[:id])
     @owner.destroy
     redirect_to owners_path
+  end
+
+  def ownerpets
+    @owners = Owner.owner_pets 
   end
 
   private
